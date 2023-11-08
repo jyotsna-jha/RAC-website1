@@ -1,0 +1,93 @@
+/* Container styles (unchanged for large screens) */
+.achievementContainer {
+    text-align: center;
+    padding-top: 20px;
+    padding-left: 190px;
+    padding-right: 190px;
+    padding-bottom: 20px;
+
+}
+
+.achievementTitle {
+    font-size: 30px;
+    margin: 20px 0;
+    padding:30px;
+}
+
+.cardRow {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap; /* Allow cards to wrap to the next line on small screens */
+}
+
+/* Card styles for large screens */
+.achievementCard {
+    width: auto; /* Adjust the width as needed for large screens */
+    margin: 5px; /* Reduce the margin to bring the cards closer for large screens */
+    border: none; /* Remove the outer border of the cards */
+    border-radius: 10px; /* Add rounded borders to the card for large screens */
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out; /* Add transition for hover effect */
+    cursor: pointer;
+    overflow: hidden; /* Hide overflowing content within the card for large screens */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add a subtle shadow to the cards */
+    background: linear-gradient(#ffda79, #f2d3f7); 
+
+
+}
+
+/* Icon styles (unchanged for large screens) */
+.achievementIcon {
+    width: 35px; /* Adjust the width as needed for large screens */
+    height:30px; /* Adjust the height as needed for large screens */
+    margin-right: 10px; /* Adjust the margin as needed for large screens */
+    vertical-align: middle; /* To align the icon vertically with the text for large screens */
+}
+
+/* Hover effect for cards (unchanged for large screens) */
+.achievementCard:hover {
+    transform: scale(1.05); /* Scale up the card on hover for large screens */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Increase the shadow effect on hover for large screens */
+}
+
+/* Add padding to the outside of the button (unchanged for large screens) */
+.card-body .btn {
+    padding: 5px 15px; /* Adjust padding as needed for large screens */
+    margin-top: -10px; /* Push the button slightly upwards for large screens */
+}
+
+/* Add hover effect for the card title or other elements if needed (unchanged for large screens) */
+.card-title{
+    font-weight:bold;
+}
+.card-title:hover {
+    color: #007bff; /* Change text color on hover for large screens */
+}
+
+.card-body .btn:hover {
+    background-color: #007bff; /* Change button background color on hover for large screens */
+    color: #fff; /* Change button text color on hover for large screens */
+}
+
+/* Media query for small screens (max-width: 767px) */
+@media (max-width: 767px) {
+    .achievementCard {
+        width: 100%; /* Display one card per row on small screens */
+    }
+    .achievementContainer {
+        text-align: center;
+        padding: 40px;
+    }
+}
+
+/* Define a CSS class for the button */
+.mulishButton {
+    padding: 10px 20px; /* Adjust the padding as needed */
+  }
+  
+  .buttonc {
+    margin-bottom:50px;
+  }
+
+
+  /* Add styles to the card-text class */
+/* Reduce spacing between card-text elements */

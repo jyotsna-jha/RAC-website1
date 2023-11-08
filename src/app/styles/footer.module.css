@@ -1,0 +1,48 @@
+/* components/Footer.module.css */
+
+.footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+  }
+  
+  .social-links {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+  }
+  
+  .social-links a {
+    text-decoration: none;
+    color: #fff;
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .social-links a:hover {
+    background-color: #444; /* Background color on hover */
+    border: 2px solid #fff; /* Border color on hover */
+    border-radius: 50%; /* Circular boundary on hover */
+    transition: background-color 0.3s, border 0.3s; /* Transition effect on hover */
+  }
+  
+  .social-links svg {
+    width: 32px; /* Smaller, uniform size for the icons */
+    height: 32px; /* Smaller, uniform size for the icons */
+    border-radius: 50%; /* Make the icons circular */
+    padding: 6px; /* Spacing inside the circular boundaries */
+    background-color: #fff; /* Background color for the icons */
+    transition: background-color 0.3s; /* Transition effect for icon background color on hover */
+  }
+  
+  .social-links a:hover svg {
+    background-color: #fffffff; /* Background color for the icons on hover (a slightly lighter shade of orange) */
+  }
+
+  .copyright {
+    margin-top: 10px;
+    font-size: 14px;
+  }
+  
