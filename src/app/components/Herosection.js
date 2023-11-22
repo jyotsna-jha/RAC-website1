@@ -40,17 +40,21 @@ const Herosection = ({ title, subtitle }) => {
 
             <p>
               {" "}
-              From award-winning innovation to exciting robotics projects, we've
-              got your passion covered. Discover
-              your new favorite robotics journey today.
+              From award-winning innovation to exciting robotics projects,
+              we&apos;ve got your passion covered. Discover your new favorite
+              robotics journey today.
             </p>
             <Link
               href="https://youtu.be/UMCdkk1Nf44?si=b4iPMhQXgDItMZdC"
               target="blank"
             >
               <div className={styles.buttonc}>
-            <button className={`${mulish.className} ${styles.mulishButton}`}>Explore</button>
-            </div>
+                <button
+                  className={`${mulish.className} ${styles.mulishButton}`}
+                >
+                  Explore
+                </button>
+              </div>
             </Link>
           </div>
 

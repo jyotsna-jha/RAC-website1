@@ -14,7 +14,7 @@ const Achievement = () => {
   return (
     <div className={styles.achievementContainer}>
       <h1 className={styles.achievementTitle}>
-        <img src="/achievementicon.png" alt="Achievement Icon" className={styles.achievementIcon} />
+        <Image src="/achievementicon.png" alt="Achievement Icon" className={styles.achievementIcon} width={100} height={100}/>
         Our Achievements
       </h1>
       <div className={styles.cardRow}>

@@ -18,14 +18,14 @@ const OurHistory = () => {
           members. Students from the Automobile and Mechanical, Industrial,
           Electronics, and Computer engineering departments work cohesively in
           Robotics and Automation Center for various projects and competitions.
-          RAC's inclusive approach is reflected in its diverse membership,
+          RAC&apos;s inclusive approach is reflected in its diverse membership,
           welcoming students from every faculty within our campus. This
           interdisciplinary collaboration fosters a vibrant environment where
           individuals from various backgrounds contribute their unique
-          perspectives and expertise to the field of robotics. .Through their
+          perspectives and expertise to the field of robotics. Through their
           tireless efforts, RAC has solidified its position as a pioneering
           force in the realm of robotics and technology, leaving an indelible
-          mark on the landscape of innovation within our campus and beyond.In
+          mark on the landscape of innovation within our campus and beyond. In
           addition to programs, the RAC at Thapathali Campus also organizes
           competitions and training programs for students. In the academic year
           2079, RAC participated, organized, and won several competitions
@@ -37,7 +37,7 @@ const OurHistory = () => {
           and fabrication, allowing students to learn and experiment with the
           latest technology. These programs and competitions were a great way
           for students to gain practical experience, showcase their skills, and
-          learn from industry experts. .
+          learn from industry experts.
         </p>
         {/* Add more content as needed */}
       </div>

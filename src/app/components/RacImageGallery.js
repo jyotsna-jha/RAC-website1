@@ -2,28 +2,29 @@
 "use client"
 import React, { useState } from 'react';
 import styles from "@/app/styles/racgallery.module.css"
+import Image from 'next/image';
 
 const images = [
   {
     id: 1,
-    src: 'rac3.jpg', 
+    src: '/rac3.jpg', 
     alt: 'Image 1',
   },
   {
     id: 2,
-    src: 'rac4.jpg', 
+    src: '/rac4.jpg', 
     alt: 'Image 2',
   },
   {
     id:3,
-    src:'rac5.jpg',
+    src:'/rac5.jpg',
     alt:'Image 3',
 
   },
 
   {
     id:5,
-    src:'rac7.jpg',
+    src:'/rac7.jpg',
     alt:'Image 5',
 
   },
@@ -32,13 +33,13 @@ const images = [
 
   {
     id:7,
-    src:'rac9.jpg',
+    src:'/rac9.jpg',
     alt:'Image 7',
 
   },
   {
     id:8,
-    src:'rac10.jpg',
+    src:'/rac10.jpg',
     alt:'Image 8',
 
   },
@@ -47,25 +48,25 @@ const images = [
 
   {
     id:13,
-    src:'rac15.jpg',
+    src:'/rac15.jpg',
     alt:'Image 3',
 
   },
   {
     id:14,
-    src:'rac16.jpg',
+    src:'/rac16.jpg',
     alt:'Image 3',
 
   },
   {
     id:15,
-    src:'rac17.jpg',
+    src:'/rac17.jpg',
     alt:'Image 3',
 
   },
   {
     id:16,
-    src:'rac18.jpg',
+    src:'/rac18.jpg',
     alt:'Image 3',
 
   },
@@ -73,7 +74,7 @@ const images = [
   
   {
     id:20,
-    src:'rac22.jpg',
+    src:'/rac22.jpg',
     alt:'Image 3',
 
   },
@@ -82,19 +83,19 @@ const images = [
   
   {
     id:23,
-    src:'rac25.jpg',
+    src:'/rac25.jpg',
     alt:'Image 3',
 
   },
   {
     id:24,
-    src:'rac26.jpg',
+    src:'/rac26.jpg',
     alt:'Image 3',
 
   },
   {
     id:25,
-    src:'rac27.jpg',
+    src:'/rac27.jpg',
     alt:'Image 3',
 
   },
@@ -117,11 +118,13 @@ const RacImageGallery = ({ title, description }) => {
     <div className={styles.gallery}>
       {images.map((image) => (
         <div key={image.id} className={styles.imageContainer}>
-          <img
+          <Image
             src={image.src}
             alt={image.alt}
             className={styles.image}
             onClick={() => openImageInNewTab(image.src)}
+            width={250}
+            height={250}
           />
         </div>
       ))}
