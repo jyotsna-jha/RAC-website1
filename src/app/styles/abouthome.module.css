@@ -1,0 +1,91 @@
+/* about.module.css */
+
+.container {
+  width: 100%;
+  min-height: 525px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px; /* Reduced gap for better spacing on small screens */
+  padding: 12px 16px; /* Adjusted padding for smaller screens */
+}
+
+.rightContainer {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 12px; /* Reduced gap for better spacing on small screens */
+}
+
+.heading {
+  font-size: 2rem; /* Relative font size for responsiveness */
+  font-weight: 700;
+  font-family: "Poppins", sans-serif;
+  color: #333;
+  text-align: center;
+  word-spacing: 0.02em; /* Fine-tuned word spacing for small screens */
+  position: relative;
+  padding: 5px;
+}
+
+.heading::after {
+  content: "";
+  display: block;
+  width: 20%;
+  height: 3px; /* Underline thickness */
+  background-color: #f0932b; /* Underline color */
+  position: absolute;
+  bottom: 0;
+  left: 27%; /* Centered underline */
+}
+
+.bodyText {
+  font-size: 1.6rem; /* Relative font size for responsiveness */
+  color: #666;
+  line-height: 1.6;
+  text-align: justify;
+  font-family: "Poppins", sans-serif;
+}
+
+/* Fine-tuned word spacing for very small screens */
+@media (max-width: 400px) {
+  .heading {
+    word-spacing: 0.01em; /* Further reduce word spacing for very small screens */
+    font-size: 1.8rem; /* Adjust font size for small screens */
+  }
+
+  .bodyText {
+    word-spacing: 0.005em; /* Fine-tuned word spacing for very small screens */
+    font-size: 1.4rem; /* Adjust font size for small screens */
+  }
+}
+
+.leftContainer {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.image {
+  width: 100%;
+  height: auto;
+  max-width: 500px;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+@media (min-width: 951px) {
+  .container {
+    flex-direction: row;
+    padding: 12px 64px;
+  }
+
+  .rightContainer {
+    padding: 75px 0 0 0;
+  }
+
+  .leftContainer {
+    display: flex;
+  }
+}

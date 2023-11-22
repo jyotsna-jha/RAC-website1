@@ -1,0 +1,119 @@
+/* alumniSuccessStories.module.css */
+
+.successStories {
+    text-align: center;
+    padding: 30px 0;
+  }
+  
+  .underlinedHeading {
+    position: relative;
+    display: inline-block;
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #333;
+    margin-top: 20px;
+    padding: 5px;
+  }
+  
+  .underlinedHeading::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 35%;
+    width: 135px;
+    height: 3px;
+    background-color: #f0932b;
+    transform: translateX(-50%);
+  }
+  
+  .storyContainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .storyCard {
+    width: 250px;
+    height: 350px;
+    margin: 15px;
+    padding: 10px;
+    background-color: #f2d3f7;
+    background: linear-gradient(#f7d794, #f2d3f7);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+    position: relative;
+  }
+  
+  .storyCard:hover {
+    transform: scale(1.05);
+  }
+  
+  .storyCard img {
+    width: 100%;
+    height: 60%;
+    object-fit: cover;
+    border-radius: 10px;
+  }
+  
+  .storyCard h3 {
+    margin: 10px 0;
+    font-size: 1.5rem;
+  }
+  
+  .storyCard p {
+    font-size: 1.2rem;
+    color: #555;
+    margin: 0;
+  }
+  
+  .storyCard button {
+    background-color: #161617;
+    border-radius: 2.4rem;
+    border-style: none;
+    box-sizing: border-box;
+    color: #FFFFFF;
+    cursor: pointer;
+    flex-shrink: 0;
+    font-size: 1.6rem;
+    font-weight: 400;
+    height: 4rem;
+    padding: .3rem 1.2rem;
+    text-align: center;
+    text-shadow: rgba(0, 0, 0, 0.25) 0 3px 8px;
+    transition: all .5s;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    margin-top: 8px; /* Added margin */
+  }
+  
+  .storyCard button:hover {
+    background-color: #fff;
+    border: .1rem solid #161617;
+    color: #161617;
+    transition-duration: .1s;
+  }
+  
+  @media (min-width: 768px) {
+    .storyCard button {
+      padding: 0 2.6rem;
+    }
+  }
+  
+  /* Media query for small screens */
+  @media (max-width: 768px) {
+    .underlinedHeading {
+      font-size: 2rem;
+      margin-top: 10px;
+    }
+  
+    .underlinedHeading::after {
+      width: 100px;
+    }
+  
+    .storyCard button {
+      font-size: 1rem;
+    }
+  }
+  

@@ -1,0 +1,121 @@
+/* Base styles for all screens */
+.ourTeam {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr); /* Single column for small screens */
+  grid-auto-rows: minmax(1fr, auto);
+  gap: 30px; /* Reduced the gap for small screens */
+  justify-content: center;
+  padding: 10px; /* Reduced padding */
+  margin: 0 auto;
+  max-width: 1000px;
+  margin-bottom: 20px;
+}
+
+.headingTeam {
+  font-size: 3rem; /* Increased font size */
+  font-weight: bold;
+  padding:10px;
+  color: #333;
+  text-align: center;
+  position: relative;
+  margin-top: 20px; /* Added top margin */
+  font-family: 'Poppins', sans-serif; /* Set font family to Poppins */
+
+
+}
+
+.headingTeam::after {
+  content: "";
+  display: block;
+  position: absolute;
+  bottom: 5px; /* Adjust the distance from the text */
+  left: 49%;
+  width: 95px; /* Adjust the length of the underline */
+  height: 2px; /* Adjust the thickness of the underline */
+  background-color: #f0932b; /* Adjust the color of the underline */
+  transform: translateX(-50%);
+}
+
+.parashort {
+  color: #555;
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 20px; /* Adjusted margin for spacing */
+  font-family: 'Poppins', sans-serif; /* Set font family to Poppins */
+
+  
+}
+
+.presidentCard,
+.teamCard {
+  text-align: center;
+  background: linear-gradient(#ffda79, #f2d3f7);
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  width: 100%;
+  height: auto; /* Allow the height to adjust based on content */
+  display: flex;
+  flex-direction: column;
+}
+
+.cardFrame {
+  width: 160px;
+  height: 160px;
+  overflow: hidden;
+  border: 1px solid #ddd;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+}
+
+.cardFrame img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.teamCard h2 {
+  font-size: 1.8rem; /* Reduced font size for small screens */
+  font-weight: bold;
+  color: #222f3e;
+  margin: 0;
+}
+
+.teamCard p {
+  font-size: 1.3rem; /* Reduced font size for small screens */
+  color: #222f3e;
+  margin: 0;
+}
+
+/* Hover effect for team member cards */
+.teamCard:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Media query for small screens */
+@media (min-width: 768px) {
+  .ourTeam {
+    grid-template-columns: repeat(2, 1fr); /* Two columns for medium screens */
+  }
+  .parashort {
+    font-size: 1.8rem;
+  }
+}
+
+/* Media query for big screens */
+@media (min-width: 1200px) {
+  .ourTeam {
+    gap: 40px; /* Increased the gap between cards for big screens */
+  }
+}
+
+@media (min-width: 1024px) {
+  .ourTeam {
+    grid-template-columns: repeat(4, 1fr); /* Restore four columns for larger screens */
+  }
+}

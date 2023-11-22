@@ -41,8 +41,7 @@ const Herosection = ({ title, subtitle }) => {
             <p>
               {" "}
               From award-winning innovation to exciting robotics projects, we've
-              got your passion covered. Explore our array of cutting-edge
-              technologies, participate in thrilling competitions, and discover
+              got your passion covered. Discover
               your new favorite robotics journey today.
             </p>
             <Link

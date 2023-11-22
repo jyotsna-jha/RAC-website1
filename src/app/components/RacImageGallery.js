@@ -103,7 +103,7 @@ const images = [
 
 ];
 
-const RacImageGallery = () => {
+const RacImageGallery = ({ title, description }) => {
   const [selectedImage, setSelectedImage] = useState(null);
 
   const openImageInNewTab = (src) => {

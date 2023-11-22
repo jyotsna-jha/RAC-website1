@@ -1,65 +1,54 @@
 /* src/app/components/RacImage.module.css */
 
 .gallery {
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    gap: 15px;
-    padding: 20px;
-    background-color: #f5f5f5;
-    border-radius: 15px;
-    justify-content: center;
-    overflow: hidden;
-    margin: 0 90px;
-  }
-  
-  .imageContainer {
-    position: relative;
-    overflow: hidden;
-    cursor: pointer;
-    transition: transform 0.2s;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    border-radius: 15px;
-    width: 220px; /* Adjust width as needed */
-    height: 220px; /* Adjust height as needed */
-    text-align: center;
-    background-color: #fff;
-  }
-  
-  .imageContainer:hover {
-    transform: scale(1.05);
-  }
-  
-  .image {
-    width: 100%;
-    height: 100%;
-    max-width: 100%;
-    object-fit: cover;
-    display: block;
-    transition: transform 0.2s;
-    border-radius: 15px;
-  }
-  
-  .imageContainer:hover .image {
-    transform: scale(1.1);
-  }
-  
-  
-  @keyframes shine {
-    0% {
-      background-position: -200%;
-    }
-    100% {
-      background-position: 200%;
-    }
-  }
-  
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 15px;
+  padding: 20px;
+  background-color: #f5f5f5;
+  border-radius: 15px;
+  justify-content: center;
+  overflow: hidden;
+  margin: 20px 90px; /* Adjusted margin to create space between heading and gallery */
+}
 
-  /* For screens smaller than 768px */
+.imageContainer {
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  transition: transform 0.2s;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border-radius: 15px;
+  width: 220px; /* Adjust width as needed */
+  height: 220px; /* Adjust height as needed */
+  text-align: center;
+  background-color: #fff;
+}
+
+.imageContainer:hover {
+  transform: scale(1.05);
+}
+
+.image {
+  width: 100%;
+  height: 100%;
+  max-width: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.2s;
+  border-radius: 15px;
+}
+
+.imageContainer:hover .image {
+  transform: scale(1.1);
+}
+
+/* For screens smaller than 768px */
 @media (max-width: 768px) {
   .gallery {
     grid-template-columns: repeat(2, 1fr); /* Adjust the number of columns as needed */
     gap: 10px; /* Adjust the gap as needed */
-    margin: 0 10px; /* Adjust the margin as needed */
+    margin: 20px 10px; /* Adjusted margin for smaller screens */
   }
 
   .imageContainer {
@@ -67,35 +56,34 @@
   }
 }
 
-.headingimage{
-  position:relative;
-  font-size:3vw;
-  color:#252839;
-  -webkit-text-stroke:0.3vw #383d52;
-  text-transform:uppercase;
-  text-align:center;
+/* Updated heading styling with increased font size and responsive underline */
+.headingimage {
+  font-size: 3rem; /* Adjusted font size for responsiveness */
+  font-weight: 700;
+  font-family: "Poppins", sans-serif;
+  color: #333;
+  text-align: center;
+  word-spacing: 0.02em; /* Fine-tuned word spacing for small screens */
+  position: relative;
+  padding: 5px;
 }
 
-.headingimage::before{
-  content:attr(data-text);
-  position:absolute;
-  top:0;
-  left:0;
-  width:0;
-  height:100%;
-  color: #ffda79;
-  -webkit-text-stroke:0.3vw #383d52;
-  border-right: 2px solid  #ffda79;
-  overflow:hidden;
-
-
+.headingimage::after {
+  content: "";
+  display: block;
+  width: 10%;
+  height: 3px; /* Underline thickness */
+  background-color: #f0932b; /* Underline color */
+  position: absolute;
+  bottom: 0;
+  left: 43%; /* Centered underline */
 }
 
-@keyframes animate{
-  0%,10%,100%{
-    width:60%;
-  }
-  70%,90%{
-    width:100%;
+/* For screens smaller than 768px */
+@media (max-width: 768px) {
+  /* Adjusted width of the underline for responsiveness */
+  .headingimage::after {
+    width: 30%; /* Adjust the width for smaller screens */
+    left: 20%; /* Centered underline for smaller screens */
   }
 }

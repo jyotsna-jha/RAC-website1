@@ -5,13 +5,12 @@
     padding-left: 190px;
     padding-right: 190px;
     padding-bottom: 20px;
-
 }
 
 .achievementTitle {
     font-size: 30px;
     margin: 20px 0;
-    padding:30px;
+    padding: 30px;
 }
 
 .cardRow {
@@ -30,15 +29,13 @@
     cursor: pointer;
     overflow: hidden; /* Hide overflowing content within the card for large screens */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add a subtle shadow to the cards */
-    background: linear-gradient(#ffda79, #f2d3f7); 
-
-
+    background: linear-gradient(#ffda79, #f2d3f7);
 }
 
 /* Icon styles (unchanged for large screens) */
 .achievementIcon {
     width: 35px; /* Adjust the width as needed for large screens */
-    height:30px; /* Adjust the height as needed for large screens */
+    height: 30px; /* Adjust the height as needed for large screens */
     margin-right: 10px; /* Adjust the margin as needed for large screens */
     vertical-align: middle; /* To align the icon vertically with the text for large screens */
 }
@@ -51,16 +48,31 @@
 
 /* Add padding to the outside of the button (unchanged for large screens) */
 .card-body .btn {
-    padding: 5px 15px; /* Adjust padding as needed for large screens */
+    padding: 10px 20px; /* Adjust padding as needed for large screens */
     margin-top: -10px; /* Push the button slightly upwards for large screens */
 }
 
 /* Add hover effect for the card title or other elements if needed (unchanged for large screens) */
-.card-title{
-    font-weight:bold;
+.card-title {
+    font-weight: bold;
+    font-size: 1.8em; /* Adjust the font size for improved readability */
+    font-family: 'Poppins', sans-serif;
+    margin-bottom: 10px;
+    margin-top:10px; 
+    color:#2d3436;
+    
+    /* Add margin at the bottom for better spacing */
 }
+
 .card-title:hover {
-    color: #007bff; /* Change text color on hover for large screens */
+    color: #636e72; /* Change text color on hover for large screens */
+}
+
+/* Add styles to the card-text class */
+/* Reduce spacing between card-text elements */
+.card-text {
+    font-size: 1em; /* Adjust the font size as needed */
+    color: #555; /* Set the default text color */
 }
 
 .card-body .btn:hover {
@@ -82,12 +94,8 @@
 /* Define a CSS class for the button */
 .mulishButton {
     padding: 10px 20px; /* Adjust the padding as needed */
-  }
-  
-  .buttonc {
-    margin-bottom:50px;
-  }
+}
 
-
-  /* Add styles to the card-text class */
-/* Reduce spacing between card-text elements */
+.buttonc {
+    margin-bottom: 50px;
+}

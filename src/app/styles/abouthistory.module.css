@@ -1,0 +1,56 @@
+/* history.module.css */
+.historyContainer {
+  padding: 40px 20px; /* Default padding */
+  text-align: justify;
+  
+}
+
+.historyContent {
+  max-width: 1000px; /* Increased width */
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.historyTitle {
+  font-size: 3em; /* Increased font size */
+  font-family: 'Poppins', sans-serif;
+  font-weight: bold;
+  color: #000; /* Black color */
+  margin-bottom: 10px;
+  position: relative;
+}
+
+.historyTitle::after {
+  content: '';
+  display: block;
+  width: 50%;
+  height: 3px; /* Underline thickness */
+  background-color: #f0932b; /* New underline color */
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+.historyDescription {
+  font-size: 1.6em; /* Slightly increased font size */
+  font-family: 'Open Sans', sans-serif;
+  color: #666;
+  line-height: 1.6;
+}
+
+/* Responsive styles for smaller screens */
+@media (max-width: 768px) {
+  .historyContainer {
+    padding: 20px; /* Adjusted padding for smaller screens */
+  }
+
+  .historyTitle {
+    font-size: 2.2em; /* Adjusted font size for smaller screens */
+  }
+
+  .historyDescription {
+    font-size: 1.2em; /* Adjusted font size for smaller screens */
+  }
+}

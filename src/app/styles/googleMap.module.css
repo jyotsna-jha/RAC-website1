@@ -1,0 +1,23 @@
+/* googlemap.module.css */
+
+/* Style for the container of the Google Map */
+.google-map-container {
+    width: 100%;
+    height: 400px;
+    margin-top: 2rem;
+    margin-bottom: 4rem; /* Increased margin to the bottom for more spacing */
+  }
+  
+  /* Apply styles to the map */
+  .google-map {
+    width: 100%;
+    height: 100%;
+  }
+  
+  /* Apply styles to the marker on the map */
+  .google-map-marker {
+    color: #ff0000; /* Red color for the marker */
+    font-size: 2rem;
+    margin-top: -2rem; /* Adjusted margin to align the marker properly */
+  }
+  

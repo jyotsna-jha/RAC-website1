@@ -1,0 +1,72 @@
+/* styles/AlumniJourney.module.css */
+
+.alumniJourneyContainer {
+  max-width: 1200px; /* Increase the maximum width as needed */
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.underlinedHeading {
+  text-align: center; /* Center the heading horizontally */
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center the heading vertically */
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #333;
+  margin-top: 20px;
+  position: relative;
+  padding: 5px;
+  
+}
+
+.underlinedHeading::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 45%;
+  transform: translateX(-50%);
+  width: 150px; /* Adjust the width to 50% of the container */
+  height: 3px;
+  background-color: #f0932b;
+}
+
+.alumniCard {
+  background-color: #f8f8f8;
+  border-radius: 8px;
+  padding: 20px;
+  margin-top: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.alumniImage {
+  width: 150px; /* Adjust the width as needed */
+  height: 150px; /* Set a fixed height for a square shape */
+  object-fit: cover; /* Maintain aspect ratio while covering the frame */
+  border-radius: 50%; /* Create a rounded frame for the image */
+  margin-bottom: 20px;
+}
+
+.journeyDescription {
+  font-size: 1.4rem; /* Increased font size */
+  line-height: 1.8;
+  color: #666;
+  font-family: 'Poppins', sans-serif; /* Set font family to Poppins */
+  text-align: justify;
+  max-width: 1000px; /* Adjust the maximum width as needed */
+  margin: 0 auto;
+  word-break: break-word;
+
+  /* Media Query for smaller screens */
+  @media (max-width: 768px) {
+    font-size: 1.2rem; /* Decrease font size for smaller screens */
+    letter-spacing: 0.5px; /* Adjust letter spacing for smaller screens */
+    .underlinedHeading {
+      font-size: 1rem; /* Adjust font size for smaller screens */
+    }
+  }
+}
+

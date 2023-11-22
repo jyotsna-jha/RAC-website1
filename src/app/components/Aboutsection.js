@@ -8,27 +8,28 @@ import Image from "next/image";
 import { Mulish } from "next/font/google";
 
 // ...
+// ... (your existing imports)
 const mulish = Mulish({
   weight: ["300", "400", "500", "600", "700", "800", "900"],
   subsets: ["latin"],
   display: "swap",
 });
-
 const Aboutsection = ({ title, subtitle }) => {
   const lottieContainerRef = useRef(null);
 
   useEffect(() => {
-    const animation = lottie.loadAnimation({
-      container: lottieContainerRef.current,
-      renderer: "svg", // You can change this to 'canvas' or 'html' as needed
-      loop: true, // Whether the animation should loop
-      autoplay: true, // Whether the animation should start automatically
-      path: "/robot3.json", // Path to your Lottie JSON file in the public folder
-    });
+    const loadSvg = async () => {
+      // Load the SVG dynamically
+      const response = await fetch('/abouts.svg');
+      const svgData = await response.text();
 
-    return () => {
-      animation.destroy();
+      // Replace the content of lottieContainerRef with the SVG
+      if (lottieContainerRef.current) {
+        lottieContainerRef.current.innerHTML = svgData;
+      }
     };
+
+    loadSvg();
   }, []);
 
   return (
@@ -39,21 +40,18 @@ const Aboutsection = ({ title, subtitle }) => {
             <h1>{title}</h1>
 
             <p>
-              {" "}
               Welcome to the official website of our Robotics And Automation Center. We are a passionate group of individuals who share a common interest in robotics, technology, and innovation. Our club provides a platform for students and enthusiasts to explore the exciting world of robotics.
             </p>
-            <Link
-              href="https://youtu.be/UMCdkk1Nf44?si=b4iPMhQXgDItMZdC"
-              target="blank"
-            >
+
+            <Link href="https://youtu.be/UMCdkk1Nf44?si=b4iPMhQXgDItMZdC" target="blank">
               <div className={styles.buttonc}>
-            <button className={`${mulish.className} ${styles.mulishButton}`}>Contact Us</button>
-            </div>
+                <button className={`${mulish.className} ${styles.mulishButton}`}>Contact Us</button>
+              </div>
             </Link>
           </div>
 
           <div className={heroStyles1.hero_image}>
-            <div ref={lottieContainerRef} id="lottie-animation"   style={{ width: '100%', maxWidth: '500px' }}></div>
+            <div ref={lottieContainerRef} id="lottie-animation" style={{ width: '100%', maxWidth: '500px' }}></div>
           </div>
         </div>
       </div>
