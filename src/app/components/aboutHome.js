@@ -3,13 +3,14 @@
 import React from "react";
 import Link from "next/link";
 import styles from "@/app/styles/abouthome.module.css";
+import Image from "next/image";
 
 const AboutThapathaliComponent = () => {
   return (
     <>
       <div className={styles.container}>
         <div className={styles.leftContainer}>
-          <img src="/ourteam.png" className={styles.image} alt="Campus Chief" />
+          <Image src="/ourteam.png" className={styles.image} alt="Campus Chief" width={500} height={300} />
         </div>
         <div className={styles.rightContainer}>
           <div className={styles.heading}>Robotics And Automation Center</div>

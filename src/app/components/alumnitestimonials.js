@@ -2,16 +2,19 @@
 
 import React from "react";
 import styles from "@/app/styles/alumniTestimonials.module.css"; // Import the CSS module
+import Image from "next/image";
 
 const AlumniJourney = () => {
   return (
     <div className={styles.alumniJourneyContainer}>
       <h2 className={styles.underlinedHeading}>Alumni Success Stories</h2>
       <div className={styles.alumniCard}>
-        <img
-          src="Nitesh.jpg"
+        <Image
+          src="/Nitesh.jpg"
           alt="Alumni Image"
           className={styles.alumniImage}
+          width={200}
+          height={200}
         />
         <p className={styles.journeyDescription}>
           My journey with the Robotics and Automation Center (RAC) commenced in
